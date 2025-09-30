@@ -1,17 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { TypeAnimation } from "react-type-animation";
-import LiquidEther from "../LiquidEther";
+import React from "react";
 
 const Home: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   return (
     <section
@@ -26,24 +15,10 @@ const Home: React.FC = () => {
               <span className="text-purple-600 dark:text-purple-800">Sahan</span>
             </h1>
 
-            {/* Animated Gradient Subtitle */}
-            <TypeAnimation
-              sequence={[
-                "Passionate Full Stack Developer",
-                2000,
-                "Creative Front-End Designer",
-                2000,
-                "Back-End Specialist",
-                2000,
-                "UI/UX Enthusiast",
-                2000
-              ]}
-              wrapper="p"
-              cursor={true}
-              repeat={Infinity}
-              speed={50}
-              className="text-4xl font-poppins font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-purple-800 to-indigo-500"
-            />
+            {/* Subtitle */}
+            <p className="text-4xl font-poppins font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-purple-800 to-indigo-500">
+              Passionate Full Stack Developer
+            </p>
 
             {/* Download Button */}
             <a
